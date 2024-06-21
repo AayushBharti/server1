@@ -1,0 +1,1 @@
+alert("Hacker detected");
