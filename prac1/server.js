@@ -13,9 +13,13 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/profile/:aayush", (req, res) => {
-  res.send("working ");
+app.get("/profile/:username", (req, res) => {
+  res.send(`Welcome, ${req.params.username.toUpperCase()}`);
 });
+
+app.get("/profile/:username/:age", (req, res) => {
+    res.send(`Welcome, ${req.params.username.toUpperCase()}, Your are ${req.params.age} years old`);
+  });
 
 app.listen(3000, () => {
   console.log("server started");
